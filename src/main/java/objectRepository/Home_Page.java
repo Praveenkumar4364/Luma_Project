@@ -80,10 +80,10 @@ public class Home_Page extends SeleniumUtility {
 	{
 		mouseOverAction(driver, women);
 		mouseOverAction(driver, top);
-		//jackets.click();
+		jackets.click();
 		//hoodiesandsweatshirts.click();
 		//tees.click();
-		brasandtanks.click();
+		//brasandtanks.click();
 	}
 	public void signoutOperation()
 	{
