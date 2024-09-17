@@ -15,7 +15,7 @@ public class Women_Product extends Base_Class{
 	public void product() throws Exception
 	{
 		Home_Page hp=new Home_Page(driver);
-		hp.womenproductOnTop(driver);
+		hp.womenproductOnTopJackets(driver);
 		Jackets_Class js=new Jackets_Class(driver);
 		js.operationOnJackets();
 	}

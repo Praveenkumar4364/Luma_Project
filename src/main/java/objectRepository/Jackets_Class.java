@@ -13,6 +13,10 @@ private WebElement style;
 @FindBy(xpath = "//a[contains(@href,'https://magento.softwaretestingboard.com/women/"
 		+ "tops-women/jackets-women.html?product_list_mode=list&style_general=119')]")
 private WebElement lightweight;
+@FindBy(xpath = "//div[text()='Size']")
+private WebElement size;
+@FindBy(xpath = "(//div[@class='swatch-option text '])[3]")
+private WebElement m;
 
 public Jackets_Class(WebDriver driver)
 {
@@ -31,11 +35,21 @@ public WebElement getLightweight()
 {
 	return lightweight;
 }
+public WebElement getSize() {
+	return size;
+}
+public WebElement getM()
+{
+	return m;
+}
 
 public void operationOnJackets()
 {
 	list.click();
 	style.click();
 	lightweight.click();
+	size.click();
+	m.click();
+	
 }
 }

@@ -76,14 +76,29 @@ public class Home_Page extends SeleniumUtility {
 	{
 		signin.click();
 	}
-	public void womenproductOnTop(WebDriver driver)
+	public void womenproductOnTopJackets(WebDriver driver)
 	{
 		mouseOverAction(driver, women);
 		mouseOverAction(driver, top);
 		jackets.click();
-		//hoodiesandsweatshirts.click();
-		//tees.click();
-		//brasandtanks.click();
+	}
+	public void womenproductOnTopHoodiesandSweatshirts(WebDriver driver)
+	{
+		mouseOverAction(driver, women);
+		mouseOverAction(driver, top);
+		hoodiesandsweatshirts.click();
+	}
+	public void womenproductOnTopTees(WebDriver driver)
+	{
+		mouseOverAction(driver, women);
+		mouseOverAction(driver, top);
+		tees.click();
+	}
+	public void womenproductOnTopBrasandTanks(WebDriver driver)
+	{
+		mouseOverAction(driver, women);
+		mouseOverAction(driver, top);
+		brasandtanks.click();
 	}
 	public void signoutOperation()
 	{
