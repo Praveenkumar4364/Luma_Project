@@ -17,6 +17,15 @@ private WebElement lightweight;
 private WebElement size;
 @FindBy(xpath = "(//div[@class='swatch-option text '])[3]")
 private WebElement m;
+@FindBy(xpath = "//div[text()='Climate']")
+private WebElement climate;
+@FindBy(xpath = "//a[contains(@href,'https://magento.softwaretestingboard.com/"
+		+ "women/tops-women/jackets-women.html?climate=205')]")
+private WebElement mild;
+@FindBy(xpath = "//div[text()='Color']")
+private WebElement color;
+@FindBy(xpath = "(//div[@option-label='Green'])[2]")
+private WebElement green;
 
 public Jackets_Class(WebDriver driver)
 {
@@ -42,6 +51,22 @@ public WebElement getM()
 {
 	return m;
 }
+public WebElement getClimate()
+{
+	return climate;
+}
+public WebElement getMild()
+{
+	return mild;
+}
+public WebElement gerColor()
+{
+	return color;
+}
+public WebElement getGreen()
+{
+	return green;
+}
 
 public void operationOnJackets()
 {
@@ -50,6 +75,9 @@ public void operationOnJackets()
 	lightweight.click();
 	size.click();
 	m.click();
-	
+	climate.click();
+	mild.click();
+	color.click();
+	green.click();
 }
 }
