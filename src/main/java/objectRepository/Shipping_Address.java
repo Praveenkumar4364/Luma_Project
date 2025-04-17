@@ -6,6 +6,11 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class Shipping_Address {
+@FindBy(xpath = "//button[@class='action action-show-popup']")
+private WebElement newaddress;
+	
+
+
 @FindBy(xpath = "//input[@name='street[0]']")
 private WebElement street;
 @FindBy(xpath = "//input[@name='city']")
@@ -21,9 +26,20 @@ private WebElement phone;
 @FindBy (xpath = "(//input[@type='radio'])[1]")
 private WebElement radio;
 
+@FindBy(xpath = "//button[@class='action primary action-save-address']")
+private WebElement shipherebtn;
+
+
+@FindBy(xpath = "//span[text()='Next']")
+private WebElement next;
+
 public Shipping_Address(WebDriver driver)
 {
 	PageFactory.initElements(driver,this);
+}
+
+public WebElement getNewaddress() {
+	return newaddress;
 }
 
 public WebElement getStreet() {
@@ -53,14 +69,36 @@ public WebElement getPhone() {
 public WebElement getRadio() {
 	return radio;
 }
-public void shippingorderOperation(String STREET,String CITY,String REGION,String POSTCODE,String COUNTRY,String PHONE)
+
+
+public WebElement getShipherebtn() {
+	return shipherebtn;
+}
+
+
+public WebElement getNext()
 {
+	return next;
+}
+
+public void shippingorderOperation(String STREET,String CITY,String REGION,String POSTCODE,String COUNTRY,String PHONE) throws InterruptedException
+{
+	getNewaddress().click();
 	street.sendKeys(STREET);
 	city.sendKeys(CITY);
 	country.sendKeys(COUNTRY);
 	region.sendKeys(REGION);
 	postcode.sendKeys(POSTCODE);
 	phone.sendKeys(PHONE);
-	radio.click();
+	//radio.click();
+	shipherebtn.click();
+	Thread.sleep(5000);
+	next.click();
+	Thread.sleep(4000);
+}
+public void shippingorderOperation() throws InterruptedException
+{
+	next.click();
+	Thread.sleep(3000);
 }
 }

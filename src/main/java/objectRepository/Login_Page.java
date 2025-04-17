@@ -35,6 +35,6 @@ public void loginOperation(String EMAIL,String PASSWORD)
 {
 	email.sendKeys(EMAIL);
 	password.sendKeys(PASSWORD);
-	signin.click();
+	getSignin().click();
 }
 }

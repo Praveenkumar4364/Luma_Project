@@ -18,7 +18,7 @@ import objectRepository.Login_Page;
 
 public class Base_Class {
 	public PropertiesUtility pUtil=new PropertiesUtility();
-	//public ExcelUtility eUtil=new ExcelUtility();
+	public ExcelUtility eUtil=new ExcelUtility();
 	public SeleniumUtility sUtil=new SeleniumUtility();
 	public JavaUtility jUtil=new JavaUtility();
 	

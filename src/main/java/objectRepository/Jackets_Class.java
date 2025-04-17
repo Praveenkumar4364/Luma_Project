@@ -1,12 +1,17 @@
 package objectRepository;
 
+import java.util.Iterator;
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class Jackets_Class {
-@FindBy(xpath = "(//a[@id='mode-list'])[1]")
+import genericUtility.SeleniumUtility;
+
+public class Jackets_Class extends SeleniumUtility{
+@FindBy(xpath = "(//a[@title='List'])[1]")
 private WebElement list;
 @FindBy(xpath = "//div[text()='Style']")
 private WebElement style;
@@ -26,6 +31,11 @@ private WebElement mild;
 private WebElement color;
 @FindBy(xpath = "(//div[@option-label='Green'])[2]")
 private WebElement green;
+@FindBy(xpath = "(//select[@id='sorter'])[1]")
+private WebElement sortby;
+@FindBy(xpath = "//a[text()='Learn More']")
+private WebElement learnmore;
+
 
 public Jackets_Class(WebDriver driver)
 {
@@ -67,8 +77,16 @@ public WebElement getGreen()
 {
 	return green;
 }
+public WebElement getSortby()
+{
+	return sortby;
+}
+public WebElement getLearnmore()
+{
+	return learnmore;
+}
 
-public void operationOnJackets()
+public void operationOnJackets(String DATA) throws InterruptedException
 {
 	list.click();
 	style.click();
@@ -79,5 +97,8 @@ public void operationOnJackets()
 	mild.click();
 	color.click();
 	green.click();
+	handleDropdown(sortby,DATA);
+	learnmore.click();
+
 }
 }
