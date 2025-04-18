@@ -7,6 +7,7 @@ import objectRepository.Learn_More_Class;
 import objectRepository.ReviewAndPayment;
 import objectRepository.Shipping_Address;
 import objectRepository.Shipping_Cart_Class;
+import objectRepository.ThankYouForYourPurchasePage;
 
 public class Women_Product extends Base_Class{
 
@@ -37,6 +38,9 @@ public class Women_Product extends Base_Class{
 		ReviewAndPayment rp=new ReviewAndPayment(driver);
 		rp.operationOnPaymentpage();
 		Thread.sleep(5000);
-		
+		ThankYouForYourPurchasePage tp=new ThankYouForYourPurchasePage(driver);
+		tp.operationOnThankYouForYourPurchasePage();
+		Thread.sleep(5000);
+		hp.womenproductOnTopHoodiesandSweatshirts(driver);
 	}
 }
