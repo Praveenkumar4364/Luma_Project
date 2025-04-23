@@ -18,6 +18,8 @@ public class Women_Product extends Base_Class{
 		String QUANTITY=eUtil.getDatafromExcel("Jackets",1,2);
 		String QTY=eUtil.getDatafromExcel("ShippingCart",1,0);
 		
+		
+		
 		String STREET=eUtil.getDatafromExcel("ShippingOrder",2,0);
 		String CITY=eUtil.getDatafromExcel("ShippingOrder",2,1);
 		String STATE=eUtil.getDatafromExcel("ShippingOrder",2,2);
@@ -35,6 +37,9 @@ public class Women_Product extends Base_Class{
 		Shipping_Address shp=new Shipping_Address(driver);
 		shp.shippingorderOperation(STREET, CITY, STATE, POSTALCODE, COUNTRY, PHNO);
 		//shp.shippingorderOperation();
+		
+		sUtil.captureScreenShot(driver,"HHH1");
+		
 		ReviewAndPayment rp=new ReviewAndPayment(driver);
 		rp.operationOnPaymentpage();
 		Thread.sleep(5000);
