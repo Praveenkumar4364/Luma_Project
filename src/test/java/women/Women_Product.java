@@ -43,6 +43,9 @@ public class Women_Product extends Base_Class{
 		ReviewAndPayment rp=new ReviewAndPayment(driver);
 		rp.operationOnPaymentpage();
 		Thread.sleep(5000);
+		
+		sUtil.captureScreenShot(driver,"HHH1");
+	
 		ThankYouForYourPurchasePage tp=new ThankYouForYourPurchasePage(driver);
 		tp.operationOnThankYouForYourPurchasePage();
 		Thread.sleep(5000);
