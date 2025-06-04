@@ -2,8 +2,10 @@ package women;
 import org.testng.annotations.Test;
 import genericUtility.Base_Class;
 import objectRepository.Home_Page;
+import objectRepository.Hoodies_Sweatshirts;
 import objectRepository.Jackets_Class;
 import objectRepository.Learn_More_Class;
+import objectRepository.Outfit_Page;
 import objectRepository.ReviewAndPayment;
 import objectRepository.Shipping_Address;
 import objectRepository.Shipping_Cart_Class;
@@ -38,17 +40,26 @@ public class Women_Product extends Base_Class{
 		shp.shippingorderOperation(STREET, CITY, STATE, POSTALCODE, COUNTRY, PHNO);
 		//shp.shippingorderOperation();
 		
-		sUtil.captureScreenShot(driver,"HHH1");
+		//sUtil.captureScreenShot(driver,"HHH1");
 		
 		ReviewAndPayment rp=new ReviewAndPayment(driver);
 		rp.operationOnPaymentpage();
 		Thread.sleep(5000);
 		
-		sUtil.captureScreenShot(driver,"HHH1");
+		//sUtil.captureScreenShot(driver,"HHH1");
 	
 		ThankYouForYourPurchasePage tp=new ThankYouForYourPurchasePage(driver);
 		tp.operationOnThankYouForYourPurchasePage();
 		Thread.sleep(5000);
 		hp.womenproductOnTopHoodiesandSweatshirts(driver);
+		
+		sUtil.scrollDownAction(driver);
+		sUtil.scrollDownAction(driver);
+		
+		Hoodies_Sweatshirts hs=new Hoodies_Sweatshirts(driver);
+		hs.operationOutfit();
+		
+		Outfit_Page op=new Outfit_Page(driver);
+		op.operationOnoutfitpage();
 	}
 }
