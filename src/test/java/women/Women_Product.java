@@ -38,7 +38,7 @@ public class Women_Product extends Base_Class{
 		sp.operationOnShippingcart(QTY);
 		Shipping_Address shp=new Shipping_Address(driver);
 		shp.shippingorderOperation(STREET, CITY, STATE, POSTALCODE, COUNTRY, PHNO);
-		//shp.shippingorderOperation();
+		shp.shippingorderOperation();
 		
 		//sUtil.captureScreenShot(driver,"HHH1");
 		
