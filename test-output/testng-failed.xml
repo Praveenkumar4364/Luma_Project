@@ -7,8 +7,8 @@
         <methods>
           <include name="bcConfig"/>
           <include name="acConfig"/>
-          <include name="product"/>
           <include name="bsConfig"/>
+          <include name="product"/>
           <include name="asConfig"/>
           <include name="amConfig"/>
           <include name="bmConfig"/>
